@@ -24,6 +24,7 @@ public class Repartidor implements Observer{
 		this.edad = edad;
 		
 		this.mazo = mazo;
+		mezclarMazo();
 	}
 	
 	public synchronized Carta pedirCarta() throws Exception {

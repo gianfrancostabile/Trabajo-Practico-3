@@ -12,7 +12,6 @@ public class Main {
 		data_base = JDBC.getInstance();
 
 		Mesa mesa = new Mesa();
-		mesa.getRepartidor().mezclarMazo();
 
 		for (Jugador jug : mesa.getListaJugadores()) {
 			new Thread(jug).start();

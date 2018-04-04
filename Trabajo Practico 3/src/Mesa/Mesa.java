@@ -17,9 +17,10 @@ public class Mesa {
 	private PilaDeCartas mazo = new PilaDeCartas();
 
 	public Mesa() {
-		this.mazo.setStackCartas(this.mazo.getMazoCartasJDBC());
 		
+		this.mazo.setStackCartas(this.mazo.getMazoCartasJDBC());
 		this.repartidor = new Repartidor(mazo, "Juan", "Perez", 54);
+		
 		this.listaJugadores = new ArrayList<Jugador>();
 		
 		Jugador jugador_1 = new Jugador("Lucas", "Langa", 22, repartidor);

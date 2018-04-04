@@ -13,7 +13,7 @@ public class PilaDeCartas {
 	private Stack<Carta> pilaCartas;
 	
 	public PilaDeCartas() {
-		this.pilaCartas = new Stack<Carta>();
+		this.pilaCartas = new Stack<>();
 	}
 	
 	public PilaDeCartas(Stack<Carta> pdc) {
@@ -30,17 +30,17 @@ public class PilaDeCartas {
 	
 	public void sort() {
 		
-		for(int i = 0; i < (this.pilaCartas.size() * 2); i++) {
+		for(int i = 0; i < (this.getCantCartas() * 2); i++) {
 			
-			int posCarta_1 = (int) (Math.random() * this.pilaCartas.size());	
-			int posCarta_2 = (int) (Math.random() * this.pilaCartas.size());
+			int posCarta_1 = (int) (Math.random() * this.getCantCartas());	
+			int posCarta_2 = (int) (Math.random() * this.getCantCartas());
 			
 			if(posCarta_1 != posCarta_2) {
-				Carta pos_1 = this.pilaCartas.get(posCarta_1);
-				Carta pos_2 = this.pilaCartas.get(posCarta_2);
+				Carta carta_1 = this.pilaCartas.get(posCarta_1);
+				Carta carta_2 = this.pilaCartas.get(posCarta_2);
 				
-				this.pilaCartas.setElementAt(pos_1, posCarta_2);
-				this.pilaCartas.setElementAt(pos_2, posCarta_1);
+				this.pilaCartas.setElementAt(carta_1, posCarta_2);
+				this.pilaCartas.setElementAt(carta_2, posCarta_1);
 			}
 			
 		}
@@ -48,7 +48,7 @@ public class PilaDeCartas {
 	
 	public void mostrarMazo() {
 		
-		for(int i = 0; i < this.pilaCartas.size(); i++) {
+		for(int i = 0; i < this.getCantCartas(); i++) {
 			Carta c = this.pilaCartas.get(i);
 			System.out.println(c.getNumero() + " " + c.getNombrePalo());
 		}
