@@ -27,7 +27,7 @@ public class Repartidor implements Observer{
 		mezclarMazo();
 	}
 	
-	public synchronized Carta pedirCarta() throws Exception {
+	public synchronized Carta darCarta() throws Exception {
 		
 		if(!this.estadoMazo()) {
 			return this.mazo.getFirstCarta();

@@ -17,9 +17,9 @@ public class Jugador extends Observable implements Runnable{
 	
 	private PilaDeCartas cartasObtenidas = new PilaDeCartas();
 	
-	private String nombre = "";
-	private String apellido = "";
-	private int edad = 18;
+	private String nombre;
+	private String apellido;
+	private int edad;
 	private double puntosTotales = 0;
 	
 	public Jugador(String nombre, String apellido, int edad, Repartidor repartidor) {
@@ -29,7 +29,12 @@ public class Jugador extends Observable implements Runnable{
 		this.repartidor = repartidor;
 	}
 	
-	public Jugador() {}
+	public Jugador() {
+		this.nombre = "";
+		this.apellido = "";
+		this.edad = 18;
+		this.repartidor = null;
+	}
 
 	public synchronized double sumarPuntos() {
 		double cant = 0;
@@ -67,7 +72,7 @@ public class Jugador extends Observable implements Runnable{
 
 			try {
 				
-				Carta carta_obtenida = this.repartidor.pedirCarta();
+				Carta carta_obtenida = this.repartidor.darCarta();
 				this.pushCartaToPila(carta_obtenida);
 				
 				this.setChanged();

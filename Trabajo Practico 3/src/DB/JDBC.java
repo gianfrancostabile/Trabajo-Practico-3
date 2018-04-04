@@ -2,20 +2,9 @@ package DB;
 
 
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
-import java.util.Stack;
 
-import com.mysql.jdbc.CallableStatement;
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
-import com.mysql.jdbc.Statement;
-
-import Carta.Carta;
-import Carta.Palo;
-import Persona.Jugador;
-import Persona.Repartidor;
 
 public class JDBC{
 	
@@ -41,8 +30,6 @@ public class JDBC{
 	}
 	
 	private JDBC() {
-		
-		Statement stmt = null;
 		
 		try {
 			//STEP 2: Register JDBC driver
