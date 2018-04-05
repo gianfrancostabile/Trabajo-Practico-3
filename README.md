@@ -3,7 +3,7 @@
 **1) Persistencia ultilizada y por qué se eligió**. -MySQL porque es el unico que se utilizar mejor.
 
 **2) En caso de agregar una dificultad, explicar la funcionalidad del juego.** -El juego consta de 4 jugadores y 1 repartidor, cada jugador va pidiendo una carta, compitiendo entre ellos quien obtiene una. Esta acción se va a ir realizando siempre, hasta que el repartidor se quede sin cartas. Una vez que no hayan mas cartas que repartir, cada jugador sumarán sus puntos, el punto lo determina el número de la carta y ademas dependiendo del palo se aplicará un bonus. Este bonus determinará en el valor de la carta, X es el numeró de la carta:
-    Si la Carta es de:
+    \nSi la Carta es de:
       -Oro = X * 2.
       -Espada = X * 1.5.
       -Copa = X * 1.
