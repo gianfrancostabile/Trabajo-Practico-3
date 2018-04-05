@@ -12,4 +12,4 @@
       
 Los valores obtenidos por cada carta se suman si obtendrán su puntaje total. Una vez que todos hayan obtenido su puntaje, el jugador que tenga el mayor número de puntos será el ganador.
 
-**3)Realizar un Diagrama UML y adjuntarlo.** El diagrama se encuentra dentro de la carpeta del proyecto.          (https://github.com/gianfrancostabile/Trabajo-Practico-3/blob/master/Trabajo%20Practico%203/src/UML_TP3_LabV.ucls)
+**3)Realizar un Diagrama UML y adjuntarlo.** El diagrama se encuentra dentro de la carpeta del proyecto.          (https://github.com/gianfrancostabile/Trabajo-Practico-3/blob/master/Trabajo%20Practico%203/UML/UML_TP3_LabV.png)
