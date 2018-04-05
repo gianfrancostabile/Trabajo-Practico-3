@@ -14,11 +14,12 @@ public class Mesa {
 	
 	private Repartidor repartidor;
 	private ArrayList<Jugador> listaJugadores;
-	private PilaDeCartas mazo = new PilaDeCartas();
 
 	public Mesa() {
 		
-		this.mazo.setStackCartas(this.mazo.getMazoCartasJDBC());
+		PilaDeCartas mazo = new PilaDeCartas();
+		mazo.setStackCartas(mazo.getMazoCartasJDBC());
+		
 		this.repartidor = new Repartidor(mazo, "Juan", "Perez", 54);
 		
 		this.listaJugadores = new ArrayList<Jugador>();
@@ -143,9 +144,6 @@ public class Mesa {
 		return listaJugadores;
 	}
 
-	public PilaDeCartas getMazo() {
-		return mazo;
-	}
 
 	
 }

@@ -82,9 +82,9 @@ public class Jugador extends Observable implements Runnable{
 				
 			}	finally {
 					
-					try {
-						Thread.sleep(new Random().nextInt(1000));
-					} catch (InterruptedException e) { }
+				try {
+					Thread.sleep(new Random().nextInt(1000));
+				} catch (InterruptedException e) { }
 			}
 		}
 		
@@ -92,7 +92,7 @@ public class Jugador extends Observable implements Runnable{
 		System.out.println("\n" + this.nombre + " " + this.apellido + " sumo: " + this.puntosTotales + " puntos.");
 	}
 
-	public void pushCartaToPila(Carta c) {
+	private void pushCartaToPila(Carta c) {
 		this.cartasObtenidas.pushCarta(c);
 	}
 	

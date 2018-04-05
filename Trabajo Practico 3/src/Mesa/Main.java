@@ -5,13 +5,14 @@ import Persona.Jugador;
 
 public class Main {
 
-	private static JDBC data_base;
+	private static JDBC dataBase;
+	private static Mesa mesa;
 
 	public static void main(String[] args) {
 
-		data_base = JDBC.getInstance();
+		dataBase = JDBC.getInstance();
 
-		Mesa mesa = new Mesa();
+		mesa = new Mesa();
 
 		for (Jugador jug : mesa.getListaJugadores()) {
 			new Thread(jug).start();
@@ -26,6 +27,6 @@ public class Main {
 
 		mesa.saveAll(ganador, mesa.getRepartidor());
 
-		data_base.closeJDBC();
+		dataBase.closeJDBC();
 	}
 }
